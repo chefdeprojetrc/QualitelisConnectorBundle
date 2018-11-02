@@ -9,11 +9,11 @@ Compatible with :
 
 Create qualitelis.yaml file in config/packages
 
-`yaml
+```yaml
 qualitelis:
     group_id: 0
     token: 'dummy'
-`
+```
 
 ## License
 
