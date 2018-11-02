@@ -5,9 +5,9 @@ parameters:
 
 services:
     elysion.qualitelis.manager:
-        class: '%elysion.qualitelis.manager.qualitelis%'
+        class: "%elysion.qualitelis.manager.qualitelis%"
         arguments:
-            - '@elysion.qualitelis.denormalizer.prestataire'
-            - '@elysion.qualitelis.denormalizer.all_prestataires'
-            - '%elysion.qualitelis.model.prestataire%'
-            - '%elysion.qualitelis.model.comment%'
+            - "@elysion.qualitelis.denormalizer.prestataire"
+            - "@elysion.qualitelis.denormalizer.all_prestataires"
+            - "%elysion.qualitelis.model.prestataire%"
+            - "%elysion.qualitelis.model.comment%"

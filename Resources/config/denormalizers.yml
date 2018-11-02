@@ -5,13 +5,13 @@ parameters:
 services:
     # Denormalizers
     elysion.qualitelis.denormalizer.prestataire:
-        class: '%elysion.qualitelis.denormalizers.prestaire%'
+        class: "%elysion.qualitelis.denormalizers.prestaire%"
         arguments:
             - "%elysion.qualitelis.model.prestataire%"
             - "%elysion.qualitelis.model.comment%"
-    
+
     elysion.qualitelis.denormalizer.all_prestataires:
-        class: '%elysion.qualitelis.denormalizers.all_prestaires%'
+        class: "%elysion.qualitelis.denormalizers.all_prestaires%"
         arguments:
             - "%elysion.qualitelis.model.prestataire%"
             - "%elysion.qualitelis.model.comment%"
