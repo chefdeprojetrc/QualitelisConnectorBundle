@@ -1,0 +1,3 @@
+qualitelis:
+    group_id: "%env(qualitelis_group_id)%"
+    token: "%env(qualitelis_token)%"
