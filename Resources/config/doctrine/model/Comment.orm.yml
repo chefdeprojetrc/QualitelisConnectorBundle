@@ -58,7 +58,6 @@ Elysion\QualitelisConnectorBundle\Model\Comment:
          replyMail:
             nullable: true
             column: reply_mail
-            nullable: true
          language:
             type: string
             column: language
