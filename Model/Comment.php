@@ -159,7 +159,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setReplyDate($replyDate): CommentInterface
+    public function setReplyDate(string $replyDate): CommentInterface
     {
         $this->replyDate = \DateTime::createFromFormat('d/m/Y', $replyDate);
 
