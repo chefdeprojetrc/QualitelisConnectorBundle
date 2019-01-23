@@ -23,98 +23,98 @@ interface PrestataireInterface
     /**
      * @return int
      */
-    public function getIdPrestataire();
+    public function getIdPrestataire(): int;
 
     /**
      * @param int $idPrestataire
      *
      * @return $this
      */
-    public function setIdPrestataire($idPrestataire);
+    public function setIdPrestataire(int $idPrestataire): self;
 
     /**
      * @return int
      */
-    public function getNbAnsweredSurveys();
+    public function getNbAnsweredSurveys(): int;
 
     /**
      * @param int $nbAnsweredSurveys
      *
      * @return $this
      */
-    public function setNbAnsweredSurveys($nbAnsweredSurveys);
+    public function setNbAnsweredSurveys(int $nbAnsweredSurveys): self;
 
     /**
      * @return float
      */
-    public function getSatisfactionAverage();
+    public function getSatisfactionAverage(): float;
 
     /**
      * @param float $satisfactionAverage
      *
      * @return $this
      */
-    public function setSatisfactionAverage($satisfactionAverage);
+    public function setSatisfactionAverage(float $satisfactionAverage): self;
 
     /**
      * @return ArrayCollection
      */
-    public function getComments();
+    public function getComments(): ArrayCollection;
 
     /**
      * @param ArrayCollection $comments
      *
      * @return $this
      */
-    public function setComments($comments);
+    public function setComments(ArrayCollection $comments): self;
 
     /**
      * @param CommentInterface $comment
      *
      * @return $this
      */
-    public function addComment(CommentInterface $comment);
+    public function addComment(CommentInterface $comment): self;
 
     /**
      * @param CommentInterface $comment
      *
      * @return $this
      */
-    public function removeComment(CommentInterface $comment);
+    public function removeComment(CommentInterface $comment): self;
 
     /**
      * @return array|null
      */
-    public function getTagResult();
+    public function getTagResult(): ?array;
 
     /**
      * @param array|null $tagResult
      *
      * @return $this
      */
-    public function setTagResult($tagResult);
+    public function setTagResult($tagResult): self;
 
     /**
      * @return array|null
      */
-    public function getQiResult();
+    public function getQiResult(): ?array;
 
     /**
      * @param array|null $qiResult
      *
      * @return $this
      */
-    public function setQiResult($qiResult);
+    public function setQiResult($qiResult): self;
 
     /**
      * @return array|null
      */
-    public function getQiSources();
+    public function getQiSources(): ?array;
 
     /**
      * @param array|null $qiSources
      *
      * @return $this
      */
-    public function setQiSources($qiSources);
+    public function setQiSources($qiSources): self;
 }

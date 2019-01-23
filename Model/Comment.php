@@ -69,7 +69,7 @@ class Comment implements CommentInterface
     /**
      * @return string
      */
-    public function getFirstName()
+    public function getFirstName(): string
     {
         return $this->firstName;
     }
@@ -79,7 +79,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setFirstname($firstName)
+    public function setFirstname(string $firstName): CommentInterface
     {
         $this->firstName = $firstName;
 
@@ -89,7 +89,7 @@ class Comment implements CommentInterface
     /**
      * @return string
      */
-    public function getLastName()
+    public function getLastName(): string
     {
         return $this->lastName;
     }
@@ -99,7 +99,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setLastName($lastName)
+    public function setLastName(string $lastName): CommentInterface
     {
         $this->lastName = $lastName;
 
@@ -109,7 +109,7 @@ class Comment implements CommentInterface
     /**
      * @return \DateTime
      */
-    public function getStayStart()
+    public function getStayStart(): \DateTime
     {
         return $this->stayStart;
     }
@@ -119,7 +119,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setStayStart($stayStart)
+    public function setStayStart(string $stayStart): CommentInterface
     {
         $this->stayStart = \DateTime::createFromFormat('d/m/Y', $stayStart);
 
@@ -139,7 +139,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setStayEnd($stayEnd)
+    public function setStayEnd(string $stayEnd): CommentInterface
     {
         $this->stayEnd = \DateTime::createFromFormat('d/m/Y', $stayEnd);
 
@@ -159,7 +159,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setReplyDate($replyDate)
+    public function setReplyDate($replyDate): CommentInterface
     {
         $this->replyDate = \DateTime::createFromFormat('d/m/Y', $replyDate);
 
@@ -169,7 +169,7 @@ class Comment implements CommentInterface
     /**
      * @return int
      */
-    public function getNote()
+    public function getNote(): int
     {
         return $this->note;
     }
@@ -179,7 +179,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setNote($note)
+    public function setNote(int $note): CommentInterface
     {
         $this->note = $note;
 
@@ -199,7 +199,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setComment($comment)
+    public function setComment(string $comment): CommentInterface
     {
         $this->comment = mb_convert_encoding($comment, 'UTF-8', 'auto');
 
@@ -219,7 +219,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setCommentTitle($commentTitle)
+    public function setCommentTitle(string $commentTitle): CommentInterface
     {
         $this->commentTitle = mb_convert_encoding(substr($commentTitle, 0, 254), 'UTF-8', 'auto');
 
@@ -229,7 +229,7 @@ class Comment implements CommentInterface
     /**
      * @return bool
      */
-    public function isPinned()
+    public function isPinned(): bool
     {
         return $this->pinned;
     }
@@ -239,7 +239,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setPinned($pinned)
+    public function setPinned(bool $pinned): CommentInterface
     {
         $this->pinned = $pinned;
 
@@ -249,7 +249,7 @@ class Comment implements CommentInterface
     /**
      * @return string
      */
-    public function getProfile1()
+    public function getProfile1(): string
     {
         return $this->profile1;
     }
@@ -259,7 +259,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setProfile1($profile1)
+    public function setProfile1(string $profile1): CommentInterface
     {
         $this->profile1 = $profile1;
 
@@ -269,7 +269,7 @@ class Comment implements CommentInterface
     /**
      * @return string
      */
-    public function getProfile2()
+    public function getProfile2(): string
     {
         return $this->profile2;
     }
@@ -279,7 +279,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setProfile2($profile2)
+    public function setProfile2(string$profile2): CommentInterface
     {
         $this->profile2 = $profile2;
 
@@ -289,7 +289,7 @@ class Comment implements CommentInterface
     /**
      * @return string
      */
-    public function getProfile3()
+    public function getProfile3(): string
     {
         return $this->profile3;
     }
@@ -299,7 +299,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setProfile3($profile3)
+    public function setProfile3(string $profile3): CommentInterface
     {
         $this->profile3 = $profile3;
 
@@ -309,7 +309,7 @@ class Comment implements CommentInterface
     /**
      * @return string
      */
-    public function getIdSejour()
+    public function getIdSejour(): string
     {
         return $this->idSejour;
     }
@@ -319,7 +319,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setIdSejour($idSejour)
+    public function setIdSejour(string $idSejour): CommentInterface
     {
         $this->idSejour = $idSejour;
 
@@ -329,7 +329,7 @@ class Comment implements CommentInterface
     /**
      * @return array|null
      */
-    public function getReplyMail()
+    public function getReplyMail(): ?array
     {
         return json_decode($this->replyMail, true);
     }
@@ -337,9 +337,9 @@ class Comment implements CommentInterface
     /**
      * @param array|null $replyMail
      *
-     * @return $this
+     * @return array|null
      */
-    public function setReplyMail($replyMail)
+    public function setReplyMail($replyMail): ?array
     {
         $this->replyMail = json_encode($replyMail);
 
@@ -349,7 +349,7 @@ class Comment implements CommentInterface
     /**
      * @return PrestataireInterface
      */
-    public function getPrestataire()
+    public function getPrestataire(): PrestataireInterface
     {
         return $this->prestataire;
     }
@@ -359,7 +359,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setPrestataire($prestataire)
+    public function setPrestataire(PrestataireInterface $prestataire): CommentInterface
     {
         $this->prestataire = $prestataire;
 
@@ -369,7 +369,7 @@ class Comment implements CommentInterface
     /**
      * @return string
      */
-    public function getLanguage()
+    public function getLanguage(): string
     {
         return $this->language;
     }
@@ -379,7 +379,7 @@ class Comment implements CommentInterface
      *
      * @return $this
      */
-    public function setLanguage($language)
+    public function setLanguage($language): CommentInterface
     {
         $this->language = $language;
 
