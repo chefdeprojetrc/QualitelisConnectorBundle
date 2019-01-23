@@ -52,7 +52,7 @@ class Prestataire implements PrestataireInterface
     /**
      * @return int
      */
-    public function getIdPrestataire()
+    public function getIdPrestataire(): int
     {
         return $this->idPrestataire;
     }
@@ -62,7 +62,7 @@ class Prestataire implements PrestataireInterface
      *
      * @return $this
      */
-    public function setIdPrestataire($idPrestataire)
+    public function setIdPrestataire(int $idPrestataire): PrestataireInterface
     {
         $this->idPrestataire = $idPrestataire;
 
@@ -72,7 +72,7 @@ class Prestataire implements PrestataireInterface
     /**
      * @return int
      */
-    public function getNbAnsweredSurveys()
+    public function getNbAnsweredSurveys(): int
     {
         return $this->nbAnsweredSurveys;
     }
@@ -82,7 +82,7 @@ class Prestataire implements PrestataireInterface
      *
      * @return $this
      */
-    public function setNbAnsweredSurveys($nbAnsweredSurveys)
+    public function setNbAnsweredSurveys(int $nbAnsweredSurveys): PrestataireInterface
     {
         $this->nbAnsweredSurveys = $nbAnsweredSurveys;
 
@@ -92,7 +92,7 @@ class Prestataire implements PrestataireInterface
     /**
      * @return float
      */
-    public function getSatisfactionAverage()
+    public function getSatisfactionAverage(): float
     {
         return $this->satisfactionAverage;
     }
@@ -102,7 +102,7 @@ class Prestataire implements PrestataireInterface
      *
      * @return $this
      */
-    public function setSatisfactionAverage($satisfactionAverage)
+    public function setSatisfactionAverage(float $satisfactionAverage): PrestataireInterface
     {
         $this->satisfactionAverage = $satisfactionAverage;
 
@@ -112,7 +112,7 @@ class Prestataire implements PrestataireInterface
     /**
      * @return ArrayCollection<Comment>
      */
-    public function getComments()
+    public function getComments(): ArrayCollection
     {
         return $this->comments;
     }
@@ -122,7 +122,7 @@ class Prestataire implements PrestataireInterface
      *
      * @return $this
      */
-    public function setComments($comments)
+    public function setComments(ArrayCollection $comments): PrestataireInterface
     {
         $this->comments = $comments;
 
@@ -134,7 +134,7 @@ class Prestataire implements PrestataireInterface
      *
      * @return $this
      */
-    public function addComment(CommentInterface $comment)
+    public function addComment(CommentInterface $comment): PrestataireInterface
     {
         $comment->setPrestataire($this);
         $this->comments->add($comment);
@@ -147,7 +147,7 @@ class Prestataire implements PrestataireInterface
      *
      * @return $this
      */
-    public function removeComment(CommentInterface $comment)
+    public function removeComment(CommentInterface $comment): PrestataireInterface
     {
         $comment->setPrestataire($this);
         $this->comments->remove($comment);
@@ -158,7 +158,7 @@ class Prestataire implements PrestataireInterface
     /**
      * @return array|null
      */
-    public function getTagResult()
+    public function getTagResult(): ?array
     {
         return json_decode($this->tagResult, true);
     }
@@ -168,7 +168,7 @@ class Prestataire implements PrestataireInterface
      *
      * @return $this
      */
-    public function setTagResult($tagResult)
+    public function setTagResult($tagResult): PrestataireInterface
     {
         $this->tagResult = json_encode($tagResult);
 
@@ -178,7 +178,7 @@ class Prestataire implements PrestataireInterface
     /**
      * @return array|null
      */
-    public function getQiResult()
+    public function getQiResult(): ?array
     {
         return json_decode($this->qiResult, true);
     }
@@ -188,7 +188,7 @@ class Prestataire implements PrestataireInterface
      *
      * @return $this
      */
-    public function setQiResult($qiResult)
+    public function setQiResult($qiResult): PrestataireInterface
     {
         $this->qiResult = json_encode($qiResult);
 
@@ -198,7 +198,7 @@ class Prestataire implements PrestataireInterface
     /**
      * @return array|null
      */
-    public function getQiSources()
+    public function getQiSources(): ?array
     {
         return json_decode($this->qiSources, true);
     }
@@ -208,7 +208,7 @@ class Prestataire implements PrestataireInterface
      *
      * @return $this
      */
-    public function setQiSources($qiSources)
+    public function setQiSources($qiSources): PrestataireInterface
     {
         $this->qiSources = json_encode($qiSources);
 

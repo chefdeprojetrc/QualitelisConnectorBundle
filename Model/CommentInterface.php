@@ -21,38 +21,38 @@ interface CommentInterface
     /**
      * @return string
      */
-    public function getFirstname();
+    public function getFirstname(): string;
 
     /**
      * @param string $firstname
      *
      * @return $this
      */
-    public function setFirstname($firstname);
+    public function setFirstname(string $firstname): self;
 
     /**
      * @return string
      */
-    public function getLastName();
+    public function getLastName(): string;
 
     /**
      * @param string $lastName
      *
      * @return $this
      */
-    public function setLastName($lastName);
+    public function setLastName(string $lastName): self;
 
     /**
      * @return \DateTime
      */
-    public function getStayStart();
+    public function getStayStart(): \DateTime;
 
     /**
      * @param string $stayStart
      *
      * @return $this
      */
-    public function setStayStart($stayStart);
+    public function setStayStart(string $stayStart): self;
 
     /**
      * @return \DateTime
@@ -64,7 +64,7 @@ interface CommentInterface
      *
      * @return $this
      */
-    public function setStayEnd($stayEnd);
+    public function setStayEnd(string $stayEnd): self;
 
     /**
      * @return \DateTime
@@ -76,125 +76,125 @@ interface CommentInterface
      *
      * @return $this
      */
-    public function setReplyDate($replyDate);
+    public function setReplyDate(string $replyDate): self;
 
     /**
      * @return int
      */
-    public function getNote();
+    public function getNote(): int;
 
     /**
      * @param int $note
      *
      * @return $this
      */
-    public function setNote($note);
+    public function setNote(int $note): self;
 
     /**
      * @return string
      */
-    public function getComment();
+    public function getComment(): string;
 
     /**
      * @param string $comment
      *
      * @return $this
      */
-    public function setComment($comment);
+    public function setComment(string $comment): self;
 
     /**
      * @return string
      */
-    public function getCommentTitle();
+    public function getCommentTitle(): string;
 
     /**
      * @param string $commentTitle
      *
      * @return $this
      */
-    public function setCommentTitle($commentTitle);
+    public function setCommentTitle(string $commentTitle): self;
 
     /**
      * @return bool
      */
-    public function isPinned();
+    public function isPinned(): bool;
 
     /**
      * @param bool $pinned
      *
      * @return $this
      */
-    public function setPinned($pinned);
+    public function setPinned(bool $pinned): self;
 
     /**
      * @return string
      */
-    public function getProfile1();
+    public function getProfile1(): string;
 
     /**
      * @param string $profile1
      *
      * @return $this
      */
-    public function setProfile1($profile1);
+    public function setProfile1(string $profile1): self;
 
     /**
      * @return string
      */
-    public function getProfile2();
+    public function getProfile2(): string;
 
     /**
      * @param string $profile2
      *
      * @return $this
      */
-    public function setProfile2($profile2);
+    public function setProfile2(string $profile2);
 
     /**
      * @return string
      */
-    public function getProfile3();
+    public function getProfile3(): string;
 
     /**
      * @param string $profile3
      *
      * @return $this
      */
-    public function setProfile3($profile3);
+    public function setProfile3(string $profile3): self;
 
     /**
      * @return string
      */
-    public function getIdSejour();
+    public function getIdSejour(): string;
 
     /**
      * @param string $idSejour
      *
      * @return $this
      */
-    public function setIdSejour($idSejour);
+    public function setIdSejour(string $idSejour): self;
 
     /**
      * @return array|null
      */
-    public function getReplyMail();
+    public function getReplyMail(): ?array;
 
     /**
      * @param array|null $replyMail
      *
-     * @return $this
+     * @return array|null
      */
-    public function setReplyMail($replyMail);
+    public function setReplyMail($replyMail): ?array;
 
     /**
      * @return PrestataireInterface
      */
-    public function getPrestataire();
+    public function getPrestataire(): PrestataireInterface;
 
     /**
      * @param PrestataireInterface $prestataire
      *
      * @return $this
      */
-    public function setPrestataire($prestataire);
+    public function setPrestataire(PrestataireInterface $prestataire): self;
 }
