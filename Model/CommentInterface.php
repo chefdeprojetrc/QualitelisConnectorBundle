@@ -57,7 +57,7 @@ interface CommentInterface
     /**
      * @return \DateTime
      */
-    public function getStayEnd();
+    public function getStayEnd(): \DateTime;
 
     /**
      * @param string $stayEnd
@@ -69,7 +69,7 @@ interface CommentInterface
     /**
      * @return \DateTime
      */
-    public function getReplyDate();
+    public function getReplyDate(): \DateTime;
 
     /**
      * @param string $replyDate
@@ -148,7 +148,7 @@ interface CommentInterface
      *
      * @return $this
      */
-    public function setProfile2(string $profile2);
+    public function setProfile2(string $profile2): self;
 
     /**
      * @return string
@@ -182,9 +182,9 @@ interface CommentInterface
     /**
      * @param array|null $replyMail
      *
-     * @return array|null
+     * @return self
      */
-    public function setReplyMail($replyMail): ?array;
+    public function setReplyMail($replyMail): self;
 
     /**
      * @return PrestataireInterface

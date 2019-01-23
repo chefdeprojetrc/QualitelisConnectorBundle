@@ -129,7 +129,7 @@ class Comment implements CommentInterface
     /**
      * @return \DateTime
      */
-    public function getStayEnd()
+    public function getStayEnd(): \DateTime
     {
         return $this->stayEnd;
     }
@@ -149,7 +149,7 @@ class Comment implements CommentInterface
     /**
      * @return \DateTime
      */
-    public function getReplyDate()
+    public function getReplyDate(): \DateTime
     {
         return $this->replyDate;
     }
@@ -189,7 +189,7 @@ class Comment implements CommentInterface
     /**
      * @return string
      */
-    public function getComment()
+    public function getComment(): string
     {
         return $this->comment;
     }
@@ -209,7 +209,7 @@ class Comment implements CommentInterface
     /**
      * @return string
      */
-    public function getCommentTitle()
+    public function getCommentTitle(): string
     {
         return $this->commentTitle;
     }
@@ -337,9 +337,9 @@ class Comment implements CommentInterface
     /**
      * @param array|null $replyMail
      *
-     * @return array|null
+     * @return Comment
      */
-    public function setReplyMail($replyMail): ?array
+    public function setReplyMail($replyMail): CommentInterface
     {
         $this->replyMail = json_encode($replyMail);
 
