@@ -11,7 +11,7 @@
 
 namespace Elysion\QualitelisConnectorBundle\Model;
 
-use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * Interface PrestataireInterface.
@@ -59,14 +59,14 @@ interface PrestataireInterface
     /**
      * @return ArrayCollection
      */
-    public function getComments(): ArrayCollection;
+    public function getComments();
 
     /**
      * @param ArrayCollection $comments
      *
      * @return $this
      */
-    public function setComments(ArrayCollection $comments): self;
+    public function setComments($comments): self;
 
     /**
      * @param CommentInterface $comment
