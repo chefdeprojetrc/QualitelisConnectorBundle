@@ -74,7 +74,7 @@ class Prestataire implements PrestataireInterface
      */
     public function getNbAnsweredSurveys(): int
     {
-        return $this->nbAnsweredSurveys;
+        return $this->nbAnsweredSurveys ?? 0;
     }
 
     /**
@@ -94,7 +94,7 @@ class Prestataire implements PrestataireInterface
      */
     public function getSatisfactionAverage(): float
     {
-        return $this->satisfactionAverage;
+        return $this->satisfactionAverage ?? 0.0;
     }
 
     /**
